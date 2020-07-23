@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 const path_1 = require("path");
-console.info('__dirname => ', __dirname);
+const colors = require("./color-console");
 const environment = process.env.NODE_ENV || (process.env.NODE_ENV = 'development');
-const filePath = path_1.resolve(__dirname, '..', `${environment}.env`);
+const filePath = path_1.resolve(process.cwd(), `${environment}.env`);
 try {
     const file = fs_1.readFileSync(filePath);
     const fileData = Buffer.from(file).toString('utf8');
@@ -18,10 +18,10 @@ try {
     for (const [key, value] of mapMatches.entries()) {
         process.env[key] = value;
     }
-    console.info(`SETDOTENV: CURRENT ENVIRONMENT ${process.env.NODE_ENV}`);
-    console.info(`SETDOTENV: CURRENT ENV FILE ${filePath}\n`);
+    console.info(colors.fgGreen, `SETDOTENV: CURRENT ENVIRONMENT ${process.env.NODE_ENV}`);
+    console.info(colors.fgGreen, `SETDOTENV: CURRENT ENV FILE ${filePath}\n`);
 }
 catch (error) {
-    console.error(`SETDOTENV WARNING: ENV FILE ${filePath} NOT FOUND OR INCLUDES WRONG FORMAT\n`);
+    console.error(colors.fgYellow, `SETDOTENV WARNING: ENV FILE ${filePath} NOT FOUND OR INCLUDES WRONG FORMAT`);
 }
 //# sourceMappingURL=index.js.map
