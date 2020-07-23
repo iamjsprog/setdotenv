@@ -1,18 +1,31 @@
 {
   "name": "setdotenv",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Set environment from .env file",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "lmjsprog",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmjsprog/setdotenv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lmjsprog/setdotenv/issues"
+  },
+  "homepage": "https://github.com/lmjsprog/setdotenv",
+  "engines": {
+    "node": ">=8.0.0"
   },
   "keywords": [
     "dotenv",
     "environment",
-    "nodejs"
+    "nodejs",
+    "npm",
+    "package"
   ],
-  "author": "Vladimir Mironov",
-  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^14.0.3",
