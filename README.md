@@ -6,8 +6,18 @@ Simple way to load `.env` file to process.env object
 
 Just use next string in your main file (the file that is loaded first in your project) and there we go!
 
+For typescript
+
 ```typescript
 export * from 'setdotenv';
+import express from 'express';
+```
+
+For javascript
+
+```javascript
+require('setdotenv');
+const express = require('express');
 ```
 
 ## How it works

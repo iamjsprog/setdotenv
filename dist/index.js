@@ -19,7 +19,8 @@ try {
         process.env[key] = value;
     }
     console.info(colors.fgGreen, `SETDOTENV: CURRENT ENVIRONMENT ${process.env.NODE_ENV}`);
-    console.info(colors.fgGreen, `SETDOTENV: CURRENT ENV FILE ${filePath}\n`);
+    console.info(colors.fgGreen, `SETDOTENV: CURRENT ENV FILE ${filePath}`);
+    console.info('\n');
 }
 catch (error) {
     console.error(colors.fgYellow, `SETDOTENV WARNING: ENV FILE ${filePath} NOT FOUND OR INCLUDES WRONG FORMAT`);
