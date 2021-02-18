@@ -1,6 +1,5 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import * as colors from './color-console';
 import createBuffer from './create-buffer';
 
 const environment =
@@ -25,16 +24,12 @@ try {
     process.env[key] = value;
   });
 
+  console.info(`SETDOTENV: current environment ${process.env.NODE_ENV}`);
   console.info(
-    colors.fgGreen,
-    `SETDOTENV: CURRENT ENVIRONMENT ${process.env.NODE_ENV}`,
+    `SETDOTENV: current env file ${filePath}. Was uploaded ${strings.length} variables`,
   );
-  console.info(`SETDOTENV: CURRENT ENV FILE ${filePath}`);
-  console.log(colors.fgWhite, '\n');
 } catch (error) {
   console.error(
-    colors.fgYellow,
-    `SETDOTENV WARNING: ENV FILE ${filePath} NOT FOUND OR INCLUDES WRONG FORMAT`,
+    `SETDOTENV: env file ${filePath} not found or includes wrong format`,
   );
-  console.log(colors.fgWhite, '\n');
 }

@@ -161,18 +161,13 @@
         "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
         "affectsGlobalScope": false
       },
-      "../color-console.ts": {
-        "version": "17d41c067037d089f995a9d24dee20737401fbc0eada9ea5682867cde582bd62",
-        "signature": "bba6b7c5764a8d382cae19e5ecd064ea36784a22bac6e4d5d273eb245523a493",
-        "affectsGlobalScope": false
-      },
       "../create-buffer.ts": {
         "version": "255b78d9bab902ccfef01ae8f88845680dcb7ef2654df5f571c5bea4a9c65bc0",
         "signature": "ef705d4d07b8fdc1e2ea75904cd8294a7d5da2de324f6fab4629f8bab65cf6b1",
         "affectsGlobalScope": false
       },
       "../index.ts": {
-        "version": "d6a656b83fea7269ecf4532e806f90adec31d5b5dd31e3b7f1de8d20ca0f7c2d",
+        "version": "d455cad353f8a2435d10fafdd3e1b5539f0190638081b9491604d442088aa160",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -569,7 +564,6 @@
     },
     "referencedMap": {
       "../index.ts": [
-        "../color-console.ts",
         "../create-buffer.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/path.d.ts"
@@ -1370,7 +1364,6 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "../color-console.ts",
       "../create-buffer.ts",
       "../index.ts",
       "../node_modules/@babel/parser/typings/babel-parser.d.ts",

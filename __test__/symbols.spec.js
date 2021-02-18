@@ -12,7 +12,7 @@ const answers = {
   SIMPLY: 'dummy',
 };
 
-const envLinesWithComments = `
+const symbolsWithComments = `
 __LOVE=${answers.__LOVE}
 LI_FE=${answers.LI_FE}
 FR__EE=${answers.FR__EE}
@@ -31,9 +31,9 @@ beforeAll(() => {
   process.env.NODE_ENV = 'development';
 });
 
-describe('Test lines with comments', () => {
-  it('Should add new 5 env and ignore comments', () => {
-    const file = createEnvFile('development.env', envLinesWithComments);
+describe('Test lines with symbols and comments', () => {
+  it('Should add new 5 env, ignore comments, and ignore symbols', () => {
+    const file = createEnvFile('development.env', symbolsWithComments);
     const startEnvCount = getEnvCount();
 
     require('../dist/index');
