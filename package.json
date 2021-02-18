@@ -1,7 +1,7 @@
 {
   "name": "setdotenv",
-  "version": "0.0.7",
-  "description": "Set environment from .env file",
+  "version": "1.0.0",
+  "description": "Set environment from ${process.env.NODE_ENV}.env file",
   "author": "lmjsprog",
   "license": "ISC",
   "repository": {
@@ -28,7 +28,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.11.5",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.28",
     "@types/validator": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
@@ -36,6 +37,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
+    "jest": "^26.6.3",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.9.0",

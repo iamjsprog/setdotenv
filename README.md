@@ -49,7 +49,11 @@ It doesn't read just `.env` file. Only `NODE_ENV.env` file.
 MY_ENV=show must go on
 SECRET=my secret key
 EXAMPLE=example string
+# We can use comments here
 NUMBER=123
+__TEST=test
+@SOME=data
+SYMBOLS=@!@!@#$$#%;/23$%$#%%^&
 ```
 
 and, then
@@ -57,4 +61,7 @@ and, then
 ```typescript
 process.env.MY_ENV === 'show must go on'; // true
 process.env.NUMBER === '123'; // true
+process.env.__TEST === 'test'; // true
+process.env.SOME === 'data'; // true
+process.env.SYMBOLS === '@!@!@#$$#%;/23$%$#%%^&'; // true
 ```
